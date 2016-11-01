@@ -5,7 +5,6 @@ CCFLAGS = -w -Isource -Imavlink/common -Igcomm -Iexternal
 # File names
 EXEC = mavlinkbridge
 SOURCES  = $(wildcard src/*.cc)
-SOURCES += $(wildcard external/*.cc)
 OBJECTS  = $(SOURCES:.cc=.o)
  
 # Main target
