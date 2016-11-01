@@ -52,6 +52,11 @@ CommLink::~CommLink()
         _inMessages.pop();
         free(message);
     }
+    while(_inMessagesRaw.size()) {
+        std::vector<uint8_t>* data = _inMessagesRaw.front();
+        _inMessagesRaw.pop();
+        free(data);
+    }
     _mutex.unlock();
 }
 
