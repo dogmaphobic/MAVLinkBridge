@@ -241,7 +241,7 @@ SerialComm::_setupPort(int baud)
             baudError = (cfsetispeed(&config, B921600) < 0 || cfsetospeed(&config, B921600) < 0);
             break;
         default:
-            baudError = false;
+            baudError = true;
             break;
     }
     if(baudError) {
